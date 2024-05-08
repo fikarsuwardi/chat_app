@@ -27,7 +27,7 @@ class _AuthScreenState extends State<AuthScreen> {
   var _isAuthenticating = false;
 
   void _submit() async {
-    final isValid = _form.currentState!.validate();
+    bool isValid = _form.currentState!.validate();
 
     if (!isValid || !_isLogin && _selectedImage == null) {
       // show error message ...
